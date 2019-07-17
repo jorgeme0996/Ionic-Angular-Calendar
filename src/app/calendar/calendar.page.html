@@ -1,0 +1,25 @@
+<ion-content>
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="12">
+      <div class="app-calendar">
+        <full-calendar 
+          #calendar
+          defaultView="dayGridMonth"
+          (dateClick)="handleDateClick($event)"
+          (eventClick)="handleEventClick($event)"
+          (eventDrop)="handleEventDrop($event)"
+          (eventResize)="handleEventResize($event)"
+          editable= "true"
+          [events]="calendarEvents" 
+          [plugins]="calendarPlugins"
+          [weekends]="calendarWeekends"
+          [header]="calendarHeader"
+        ></full-calendar>
+      </div>
+      
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
